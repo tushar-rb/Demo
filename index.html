@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BERT Question Answering</title>
+</head>
+<body>
+    <h1>BERT Question Answering</h1>
+    <form action="/answer" method="post">
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" style="width: 80%;"><br><br>
+        <label for="context">Context:</label><br>
+        <textarea id="context" name="context" rows="10" style="width: 80%;"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if question %}
+    <h2>Answer:</h2>
+    <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
